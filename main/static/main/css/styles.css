@@ -1,0 +1,37 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 80%;
+    margin: auto;
+}
+
+.dialogue {
+    text-align: center;
+}
+
+.message-form {
+    width: 60%;
+    margin: auto;
+}
+
+.message-text {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.dialogue-text {
+    width: 60%;
+    height: 600px;
+    margin: auto;
+    text-align: left;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+.message {
+    margin-top: 10px;
+    margin-left: 10%;
+}

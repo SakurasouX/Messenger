@@ -1,0 +1,10 @@
+.idea
+.DS_Store
+**/__pycache__/
+main/__pycache__
+main/migrations
+main/.DS_Store
+main/templates/.DS_Store
+dev_plan.txt
+*.pyc
+*.sqlite3

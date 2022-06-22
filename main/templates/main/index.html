@@ -1,0 +1,28 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+
+<div class="dialogue">
+
+    <div class="dialogue-text">
+        {% if messages %}
+            {% for message in messages %}
+            <div class="message"> {{ message.author }}: {{ message.text }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <form action="" method="POST" class="message-form">
+        {% csrf_token %}
+
+        <div class="message-text">
+            <input type="text" name="message">
+        </div>
+        <div class="message-submit">
+            <input type="submit">
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}
