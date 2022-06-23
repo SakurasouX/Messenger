@@ -3,10 +3,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet"> 
+    <title>{% block title %}{% endblock %}</title>
 </head>
+
 <body>
-{% block content %}{% endblock %}
+    <footer>
+        <div class="login-div">
+            <a class="login" href="{% url 'login' %}">Войти</a>
+            <a class="register" href="{% url 'registration' %}">Регистрация</a>
+        </div>
+    </footer>
+    {% block content %}{% endblock %}
 </body>
+
 </html>

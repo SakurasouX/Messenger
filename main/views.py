@@ -27,3 +27,7 @@ def create_context(request):
         'messages': messages
     }
     return context
+
+
+def home(request):
+    return render(request, 'main/home.html')

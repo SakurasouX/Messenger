@@ -5,6 +5,10 @@ main/__pycache__
 main/migrations
 main/.DS_Store
 main/templates/.DS_Store
+accounts/__pycache__
+accounts/migrations
+accounts/.DS_Store
+accounts/templates/.DS_Store
 dev_plan.txt
 *.pyc
 *.sqlite3
