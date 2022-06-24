@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet"> 
     <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
-    <footer>
-        <div class="login-div">
-            <a class="login" href="{% url 'login' %}">Войти</a>
-            <a class="register" href="{% url 'registration' %}">Регистрация</a>
+
+    <header>
+        <a class="logo" href="/">Social Network</a>
+        <div class="profile">
+            <a href="{% url 'login' %}">Войти</a>
+            <a href="{% url 'registration' %}">Регистрация</a>
         </div>
-    </footer>
+    </header>
+
     {% block content %}{% endblock %}
 </body>
 
