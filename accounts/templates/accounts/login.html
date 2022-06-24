@@ -3,13 +3,15 @@
 {% block content %}
 
 <div class="login-box">
-    <form action="{% url 'login' %}" method="POST">
+    <form action="{% url 'accounts:login' %}" method="POST">
         {% csrf_token %}
         <div class="profile-div">
-            <input class="profile-input" type="text" name="login" placeholder="Логин">
+            <label for="login">Логин</label>
+            <input id="login" class="profile-input" type="text" name="login" autocomplete="off">
         </div>
         <div class="profile-div">
-            <input class="profile-input" type="password" name="password" placeholder="Пароль">
+            <label for="password">Пароль</label>
+            <input id="password" class="profile-input" type="password" name="password">
         </div>
         <div class="profile-div">
             <input class="profile-submit" type="submit" value="Войти">

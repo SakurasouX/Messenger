@@ -4,27 +4,46 @@
 
 <div>
     Уже имеете аккаунт? 
-    <a href="{% url 'login' %}">Войти</a>
+    <a href="{% url 'accounts:login' %}">Войти</a>
 </div>
 
 <div class="login-box">
-    <form action="{% url 'login' %}" method="POST">
+    <form action="{% url 'accounts:registration' %}" method="POST">
         {% csrf_token %}
-        <div class="profile-div">
-            <input class="profile-input" type="text" name="first_name" placeholder="Имя">
+        <div class="name-box">
+            <div class="profile-div">
+                <label for="first_name">Имя</label>
+                <input id="first_name" class="profile-input" type="text" name="first_name">
+            </div>
+            <div class="profile-div">
+                <label for="last_name">Фамилия</label>
+                <input id="last_name" class="profile-input" type="text" name="last_name">
+            </div>
         </div>
-        <div class="profile-div">
-            <input class="profile-input" type="text" name="last_name" placeholder="Фамилия">
+        <div class="username">
+            <div class="profile-div">
+                <label for="username">Имя пользователя</label>
+                <input id="username" class="profile-input" type="text" name="username" autocomplete="off">
+            </div>
         </div>
-        <div class="profile-div">
-            <input class="profile-input" type="email" name="email" placeholder="Почта">
+        <div class="email-box">
+            <div class="profile-div">
+                <label for="email">Почта</label>
+                <input id="email" class="profile-input" type="email" name="email">
+            </div>
         </div>
-        <div class="profile-div">
-            <input class="profile-input" type="password" name="password" placeholder="Пароль">
+        <div class="password-box">
+            <div class="profile-div">
+                <label for="password">Пароль</label>
+                <input id="password" class="profile-input" type="password" name="password">
+            </div>
+            <div class="profile-div">
+                <label for="confirm_password">Подтвердите пароль</label>
+                <input class="profile-input" type="password" name="password_confirm">
+            </div>
         </div>
-        <div class="profile-div">
-            <input class="profile-input" type="password" name="password_confirm" placeholder="Подтвердите пароль">
-        </div>
+        <div class="error">{% if password %}{{ password }}{% endif %}</div>
+        <div class="error">{% if username %}{{ username }}{% endif %}</div>
         <div class="profile-div">
             <input class="profile-submit" type="submit" value="Войти">
         </div>
