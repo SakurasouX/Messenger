@@ -6,17 +6,63 @@
 
 <div class="home-main">
     <div class="home-page-left">
-        <div class="profile-box">Профиль</div>
-        <div class="main-menu"></div>
+        <div class="profile-box">
+            <div class="profile-box-div" >
+                <img class="user-photo" src="../../static/main/image/face.svg">
+                <div>
+                    <div class="name" >John Smith</div>
+                    <div class="username">@username</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu">
+            <ul>
+                <li>
+                    <img class="menu-icon" class="home-icon" src="../../static/main/image/home.svg">
+                    <a href="{% url 'main:main' %}">Главная</a>
+                </li>
+                <hr>
+                <li>
+                    <img class="menu-icon" src="../../static/main/image/people.svg">
+                    <a href="">Люди</a>
+                </li>
+                <hr>
+                <li>
+                    <img class="menu-icon" src="../../static/main/image/photo.svg">
+                    <a href="">Фото</a>
+                </li>
+                <hr>
+                <li>
+                    <img class="menu-icon" src="../../static/main/image/news.svg">
+                    <a href="">Новостная лента</a>
+                </li>
+                <hr>
+                <li>
+                    <img class="menu-icon" src="../../static/main/image/person.svg">
+                    <a href="">Профиль</a>
+                </li>
+            </ul>
+        </div>
         <div class="ad" ></div>
     </div>
 
     <div class="news-feed">
-        
+        <div class="whats-new">
+            <form action="">
+                <div class="whats-new-inside">
+                    <img  class="user-photo" src="../../static/main/image/face.svg">
+                    <div>
+                        <input type="text" placeholder="Что нового, John?">
+                    </div>
+                    <div>
+                        <input type="submit" value="Поделиться">
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 
     <div class="home-page-right">
-        <p>Запросы</p>
         <div class="friend-request"></div>
     </div>
 </div>
