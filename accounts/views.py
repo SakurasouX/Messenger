@@ -8,12 +8,14 @@ from django.urls import reverse
 def user_login(request):
     """User login"""
     if request.method == 'POST':
-        login = request.POST.get('login')
-        password = request.POST.get('password')
-        user = authenticate(request, username=login, password=password)
+        username = request.POST['login']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-        return HttpResponseRedirect(reverse('main:home'))
+            return HttpResponseRedirect(reverse('main:home'))
+        else:
+            return HttpResponse()
     else:
         return render(request, 'accounts/login.html')
 

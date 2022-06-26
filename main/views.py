@@ -31,3 +31,8 @@ def create_context(request):
 
 def home(request):
     return render(request, 'main/home.html')
+
+
+def search(request):
+    user_request = request.POST.get('search-friends')
+    return render(request, 'main/search-list.html', {'user_request': user_request})

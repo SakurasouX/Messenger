@@ -55,6 +55,30 @@ header {
     color: #1b78f1;
 }
 
+.search {
+    display: inline;
+    margin-left: 700px;
+}
+
+.search form {
+    display: inline;
+}
+
+.search-friends {
+    height: 30px;
+    width: 300px;
+    background-color: #f4f5f8;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 30px;
+    background-image: url(../image/search.svg);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 7.5px 7.5px;;
+    font-weight: 300;
+}
+
 
 /* Styles for home page */
 
@@ -335,19 +359,39 @@ hr {
     flex-grow: 1;
 }
 
-.like img {
-    width: 30px;
-    height: 30px;
-    background-color: #1b78f1;
-}
-
-.views {
+.like {
     display: flex;
     line-height: 30px;
 }
 
-.views img {
+.likes-count {
+    margin-left: 10px;
+    font-weight: 100;
+    color: gray;
+}
+
+.like img {
     width: 30px;
     height: 30px;
-    background-color: #1b78f1;   
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.comment-image {
+    display: flex;
+    line-height: 30px;
+    justify-content: right;
+}
+
+.comment-image img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.comments-count {
+    font-weight: 100;
+    color: gray;
+    margin-left: 10px;
+    margin-right: 30px;
 }
